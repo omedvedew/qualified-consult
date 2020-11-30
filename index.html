@@ -9,9 +9,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="logo"><a href="/index.html">Fundcap</a></div>
-        <div class="menu">
+    <header class="header row">
+        <div class="logo col"><a href="">Fundcap</a></div>
+        <div class="menu col">
             <ul>
                 <li><a href="#home-anchor">Home</a></li>
                 <li><a href="#feature-anchor">Feature</a></li>
@@ -19,38 +19,54 @@
                 <li><a href="">About Us</a></li>
             </ul>
         </div>
-        <div class="account-controls">
+        <div class="mobile-menu">
+            <div class="menu-toogle">
+                <input type="checkbox" id="check">
+                <label for="check" class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="mob-menu">
+                    <li><a href="#home-anchor">Home</a></li>
+                    <li><a href="#feature-anchor">Feature</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="account-controls col">
             <button>Login</button>
             <button>Get Started</button>
         </div>
     </header>
     <main class="main">
-        <div class="description" id="home-anchor">
-            <h2>The Wealth Container platform. The easiest way to launch your funds</h2>
+        <div class="description row" id="home-anchor">
+            <h2 class="col">The Wealth Container platform. The easiest way to launch your funds</h2>
         </div>
-        <div class="free-trial">
-            <button>FREE TRIAL</button>
+        <div class="free-trial row">
+            <button class="col">FREE TRIAL</button>
         </div>
-        <div class="features-container" id="feature-anchor">
-            <div class="feature-1">
+        <div class="features-container row" id="feature-anchor">
+            <div class="feature-1 col tb">
                 <h2>Define</h2>
                 <p>Define your home need. Fundcap is a Wealth Container platform. It let's you set-up and deploy complex legal entities such as Funds and SPVs in hours with a few clicks.</p>
-                <div class="feature-logo"></div>
+                <div class="feature-logo tb"></div>
             </div>
-            <div class="feature-2">
+            <div class="feature-2  col tb">
                 <h2>Strategy</h2>
                 <p>Define your home need. Fundcap is a Wealth Container platform. It let's you set-up and deploy complex legal entities such as Funds and SPVs in hours with a few clicks.</p>
-                <div class="feature-logo"></div>
+                <div class="feature-logo tb"></div>
             </div>
-            <div class="feature-3">
+            <div class="feature-3  col tb">
                 <h2>Build</h2>
                 <p>Define your home need. Fundcap is a Wealth Container platform. It let's you set-up and deploy complex legal entities such as Funds and SPVs in hours with a few clicks.</p>
-                <div class="feature-logo"></div>
+                <div class="feature-logo tb"></div>
             </div>
         </div>
-        <div class="info-container">
-            <h2>Funds and SPVs made simple</h2>
-            <p>Fundcap is a Wealth Container platform. It let's you set-up and deploy complex legal entities such as Funds and SPVs in hours with a few clicks. From initual structuring to NAV calculation, it is a fully integrated, one-stop shop platform</p>
+        <div class="info-container row">
+            <h2 class="info-heading col">Funds and SPVs made simple</h2>
+            <p class="info-text col">Fundcap is a Wealth Container platform. It let's you set-up and deploy complex legal entities such as Funds and SPVs in hours with a few clicks. From initual structuring to NAV calculation, it is a fully integrated, one-stop shop platform</p>
         </div>
     </main>
 </body>
