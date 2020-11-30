@@ -1,0 +1,91 @@
+/* All sizes are bigger than in the png image, because elemets looks to small, if I make them pixel-perfect. And I use % proportion for some margins to make elements positions more similar to the image */
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/bgr.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    padding: 0 0 0 10%;
+}
+
+/* header-formatting */
+.header {
+    display: flex;
+    align-items: center;
+    height: 75px;
+    color: white;
+}
+
+.logo {
+    margin-right: 7%;
+    /* png margin-rigth - 60px */
+}
+
+.logo a {
+    font-size: 24px;
+    /* png font-size - 14px */
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu li {
+    margin-right: 55px;
+    /* png margin-rigth - 35px */
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    /* png font-size - 10px */
+    letter-spacing: 0.5px;
+}
+
+.menu a:hover {
+    color: violet;
+}
+
+.menu {
+    margin-right: 15%;
+}
+
+.account-controls button {
+    padding: 10px 25px 10px 25px;
+    margin: 0 5px 0 5px;
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: white;
+    font-size: 14px;
+    /* png font-size - 10px */
+    letter-spacing: 0.5px;
+}
+
+.account-controls button:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.account-controls button:hover {
+    cursor: pointer;
+    color: violet;
+}
