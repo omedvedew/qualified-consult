@@ -11,7 +11,7 @@ body {
     background-image: url(images/bgr.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #fff;
+    background-color: #f1f3f6;
     padding: 0 0 0 10%;
 }
 
@@ -80,7 +80,7 @@ body {
 
 .account-controls button:focus {
     outline: none;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid white;
     border-radius: 2px;
 }
@@ -88,4 +88,60 @@ body {
 .account-controls button:hover {
     cursor: pointer;
     color: violet;
+}
+
+/* main-formatting */
+.description {
+    width: 55%;
+    margin-top: 120px;
+    color: white;
+    font-size: 33px;
+    font-weight: normal;
+}
+
+.free-trial button {
+    font-size: 18px;
+    color: #210d29;
+    background-color: #fff;
+    padding: 20px 60px 20px 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid transparent;
+}
+
+.free-trial button:hover {
+    cursor: pointer;
+}
+
+.free-trial button:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    color: white;
+}
+
+.features {
+    padding: 100px;
+    background-color: #fff;
+    display: flex;
+}
+
+.features h2 {
+    margin-bottom: 40px;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.features p {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 30px;
+}
+
+[class*="feature-"] {
+    margin-right: 40px;
+}
+
+[class*="feature-"]:last-child {
+    margin-right: 0;
 }
