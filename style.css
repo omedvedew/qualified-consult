@@ -180,6 +180,136 @@ body {
     line-height: 30px;
 }
 
+@media (max-width: 1170px) {
+    body {
+        background-size: cover;
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        margin-right: 100px;
+    }
+
+    .description .col-md {
+        margin-right: 0;
+    }
+
+    .info-text {
+        color: white;
+    }
+}
+
+/* tablet */
+@media (max-width: 800px) {
+    body {
+        padding: 15px;
+        margin: 0;
+        background-size: cover;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 0;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .header .col-sm {
+        justify-self: flex-start;
+    }
+
+    .account-controls {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 0;
+    }
+    
+    .description .col-sm {
+        font-size: 33px;
+        margin: 0;
+    }
+
+    .free-trial {
+        display: flex;
+    }
+
+    .free-trial .col-sm {
+        margin: 0 auto;
+        width: 50%;
+        font-size: 14px;
+        color: #210d29;
+        background-color: #fff;
+        padding: 10px 30px 10px 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+    }
+    
+    .free-trial .col-sm:hover {
+        cursor: pointer;
+    }
+    
+    .free-trial .col-sm:focus {
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 1px solid white;
+        color: white;
+    }
+
+    .features-container {
+        padding: 15px;
+    }
+
+    .features-container h2 {
+        margin-bottom: 20px;
+    }
+
+    .features-container p {
+        margin-top: -40px;
+    }
+
+    .features-container .col-sm {
+        margin-right: 0;
+    }
+
+    .feature-logo {
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .info-heading {
+        width: 100%;
+        font-size: 26px;
+        padding: 15px;
+        color: white;
+    }
+
+    .info-text {
+        width: 100%;
+        padding: 15px;
+        color: white;
+    }
+}
+
 /* mobile */
 @media (max-width: 425px) {
     body {
@@ -274,7 +404,7 @@ body {
     .account-controls {
         width: 100%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
     }
     
     .description .col-sm {
@@ -340,6 +470,20 @@ body {
     .info-text {
         width: 100%;
         padding: 15px;
+        color: white;
+    }
+}
+
+@media (min-width: 2160px) {
+    body {
+        background-size: 100%;
+    }
+
+    .info-text {
+        color: white;
+    }
+
+    .info-heading {
         color: white;
     }
 }
