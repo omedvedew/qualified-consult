@@ -1,10 +1,8 @@
-/* All sizes are bigger than in the png image, because elemets looks to small, if I make them pixel-perfect. And I use % proportion for some margins to make elements positions more similar to the image */
-
 * {
-    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -12,33 +10,38 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #f1f3f6;
-    padding: 0 0 0 10%;
+    margin-left: 100px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
 }
 
 /* header-formatting */
-.header {
-    display: flex;
-    align-items: center;
-    height: 75px;
-    color: white;
+.mobile-menu {
+    display: none;
 }
 
-.logo {
-    margin-right: 7%;
-    /* png margin-rigth - 60px */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
 }
 
 .logo a {
     font-size: 24px;
-    /* png font-size - 14px */
     font-weight: bold;
-    color: white;
     text-decoration: none;
+    color: white;
 }
 
 .menu ul {
-    display: flex;
     list-style-type: none;
+    display: flex;
+    margin-left: -75px;
 }
 
 .menu li {
@@ -62,8 +65,8 @@ body {
     color: violet;
 }
 
-.menu {
-    margin-right: 15%;
+.account-controls {
+    margin-right: 240px;
 }
 
 .account-controls button {
@@ -90,34 +93,29 @@ body {
     color: violet;
 }
 
-.mobile-menu {
-    display: none;
-}
-
-/* main-formatting */
-.description {
-    width: 55%;
-    margin-top: 120px;
+.description .col-md {
     color: white;
-    font-size: 33px;
+    font-size: 55px;
     font-weight: normal;
+    margin-right: 550px;
+    margin-top: 10px;
 }
 
-.free-trial button {
+.free-trial .col-md {
     font-size: 18px;
     color: #210d29;
     background-color: #fff;
-    padding: 20px 60px 20px 60px;
+    padding: 20px 70px 20px 70px;
     margin-top: 50px;
     margin-bottom: 50px;
     border: 1px solid transparent;
 }
 
-.free-trial button:hover {
+.free-trial .col-md:hover {
     cursor: pointer;
 }
 
-.free-trial button:focus {
+.free-trial .col-md:focus {
     outline: none;
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid white;
@@ -125,9 +123,8 @@ body {
 }
 
 .features-container {
-    padding: 100px;
     background-color: #fff;
-    display: flex;
+    padding: 100px;
 }
 
 .features-container h2 {
@@ -145,12 +142,8 @@ body {
     margin-bottom: 50px;
 }
 
-[class*="feature-"] {
-    margin-right: 40px;
-}
-
-[class*="feature-"]:last-child {
-    margin-right: 0;
+.features-container .col-md {
+    margin-right: 85px;
 }
 
 .feature-1 .feature-logo {
@@ -174,82 +167,37 @@ body {
     background-repeat: no-repeat;
 }
 
-.info-container {
-    display: flex;
-}
-
 .info-heading {
     width: 43%;
     padding: 100px;
-    font-size: 44px;
+    font-size: 30px;
     color: #100d1f;
 }
 
 .info-text {
-    width: 57%;
+    width: 58%;
     padding: 100px;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: normal;
     color: #2f2e3e;
     line-height: 30px;
 }
 
-/* tablet */
-@media (max-width: 768px) {
-    * {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
+/* mobile */
+@media (max-width: 425px) {
     body {
         padding: 15px;
+        margin: 0;
+        background-size: cover;
     }
 
-    .col {
-     max-width: 100%;
-     justify-content: center;
-     padding: 0;
-     margin: 10px;
+    .row {
+        flex-direction: column;
     }
 
     .menu {
         display: none;
     }
-
-    .description {
-        margin-top: 100px;
-    }
-
-    .description h2 {
-        font-size: 30px;
-    }
-
-    .tb {
-        flex-wrap: wrap;
-        flex: 0 0 33%;
-        max-width: 33%;
-        margin-bottom: 30px;
-    }
-
-    .info-container {
-        width: 100%;
-    }
-
-    .info-heading {
-        font-size: 30px;
-    }
-
-    .header {
-        flex-direction: row;
-        height: 40px;
-    }
-
-    .account-controls {
-        display: flex;
-        justify-self: flex-end;
-        justify-content: center;
-    }
-
 
     .mobile-menu {
         display: block;
@@ -266,7 +214,6 @@ body {
         border: 1px solid white;
         border-radius: 3px;
         background-color: rgba(255, 255, 255, 0.2);
-        z-index: 10;
     }
 
     .menu-btn span {
@@ -288,7 +235,7 @@ body {
     }
 
     #check:checked ~ .mob-menu {
-        display: block;
+        display: flex;
     }
 
     #check {
@@ -298,6 +245,8 @@ body {
     .mob-menu {
         display: none;
         position: absolute;
+        top: 44px;
+        left: 60px;
         list-style: none;
         background-color: rgba(255, 255, 255, 0.2);
         border: 1px solid white;
@@ -314,139 +263,86 @@ body {
     .mob-menu li {
         margin: 5px;
     }
-}
 
-@media (max-width: 1070px) {
-    .description {
-        margin-top: 100px;
-        font-size: 30px;
+    .header {
+        flex-direction: column;
+        margin: 0;
+        align-items: flex-start;
     }
-}
 
-/* mobile */
-@media (max-width: 425px) {
-    * {
-        margin-left: 0;
+    .header .col-sm {
+        justify-self: flex-start;
+    }
+
+    .account-controls {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .description .col-sm {
+        font-size: 33px;
+        margin: 0;
+    }
+
+    .free-trial {
+        display: flex;
+    }
+
+    .free-trial .col-sm {
+        margin: 0 auto;
+        width: 50%;
+        font-size: 14px;
+        color: #210d29;
+        background-color: #fff;
+        padding: 10px 30px 10px 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+    }
+    
+    .free-trial .col-sm:hover {
+        cursor: pointer;
+    }
+    
+    .free-trial .col-sm:focus {
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 1px solid white;
+        color: white;
+    }
+
+    .features-container {
+        padding: 15px;
+    }
+
+    .features-container h2 {
+        margin-bottom: 20px;
+    }
+
+    .features-container p {
+        margin-top: -40px;
+    }
+
+    .features-container .col-sm {
         margin-right: 0;
     }
 
-    body {
-        padding: 0;
-    }
-
-    .row {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .col {
-     flex: 0 0 100%;
-     max-width: 100%;
-     justify-content: center;
-     padding: 0;
-     margin: 0;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .description h2 {
-        color: #210d29;
-        font-size: 30px;
-        margin-top: 100px;
-    }
-
-    [class*="feature-"] {
+    .feature-logo {
+        margin: 0 auto;
         margin-bottom: 30px;
     }
 
     .info-heading {
         width: 100%;
-        font-size: 30px;
+        font-size: 26px;
+        padding: 15px;
+        color: white;
     }
 
     .info-text {
         width: 100%;
-    }
-
-    .header {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .account-controls {
-        display: flex;
-        justify-self: flex-end;
-        justify-content: center;
-    }
-
-
-    .mobile-menu {
-        display: block;
-    }
-
-    .menu-btn {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 30px;
-        height: 30px;
-        margin-top: 5px;
-        border: 1px solid white;
-        border-radius: 3px;
-        background-color: rgba(255, 255, 255, 0.2);
-        z-index: 10;
-    }
-
-    .menu-btn span {
-        display: block;
-        background-color: white;
-        width: 15px;
-        height: 3px;
-        border-radius: 1.5px;
-        margin: 1.5px;
-    }
-
-    #check:checked + .menu-btn {
-        border: 1px solid violet;
-        border-radius: 3px;
-    }
-
-    #check:checked + .menu-btn > span {
-        background-color: violet;
-    }
-
-    #check:checked ~ .mob-menu {
-        display: block;
-    }
-
-    #check {
-        display: none;
-    }
-
-    .mob-menu {
-        display: none;
-        position: absolute;
-        left: 15px;
-        list-style: none;
-        background-color: rgba(255, 255, 255, 0.2);
-        border: 1px solid white;
-        border-radius: 3px;
-        padding: 5px;
-    }
-
-    .mob-menu a {
-        text-decoration: none;
+        padding: 15px;
         color: white;
-        font-size: 14px;
-    }
-
-    .mob-menu li {
-        margin: 5px;
     }
 }
